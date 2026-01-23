@@ -3,7 +3,6 @@
   base = "."
   # Force a clean install so node_modules isn't reused with bad permissions
   command = "cd front-end && npm ci && npm run build"
-"
   publish = "dist"
 
 # Security headers
