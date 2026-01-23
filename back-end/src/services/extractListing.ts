@@ -146,7 +146,11 @@ function scanJsonForMonthlyPrice(obj: any): { price: number; currency?: string }
    */
   type Scored<T> = { score: number; value: T };
 
-  let best: Scored<{ price: number; currency?: string }> | null = null;
+  // NOTE:
+  // In TS strict mode, a variable that is only written inside a callback can
+  // sometimes be incorrectly narrowed ("never"/"null") at the return site.
+  // Using a ref object keeps the type stable without sacrificing runtime logic.
+  const bestRef: { current: Scored<{ price: number; currency?: string }> | null } = { current: null };
 
   walkJson(obj, (k, v, parent) => {
     const key = String(k ?? "").toLowerCase();
@@ -162,7 +166,8 @@ function scanJsonForMonthlyPrice(obj: any): { price: number; currency?: string }
           (key.includes("rent") || key.includes("monthly") ? 2 : 0) +
           (key.includes("price") ? 1 : 0);
 
-        if (!best || score > best.score) best = { score, value: pm };
+        const best = bestRef.current;
+        if (!best || score > best.score) bestRef.current = { score, value: pm };
       }
       return;
     }
@@ -180,17 +185,19 @@ function scanJsonForMonthlyPrice(obj: any): { price: number; currency?: string }
               : ""
         );
 
-        if (!best || score > best.score) best = { score, value: { price: v, currency: cur || undefined } };
+        const best = bestRef.current;
+        if (!best || score > best.score) bestRef.current = { score, value: { price: v, currency: cur || undefined } };
       }
     }
   });
 
-  return best?.value ?? null;
+  return bestRef.current?.value ?? null;
 }
 
 function scanJsonForDescription(obj: any): string | null {
   type Scored<T> = { score: number; value: T };
-  let best: Scored<string> | null = null;
+  // Same TS narrowing edge-case as above; keep state in a ref object.
+  const bestRef: { current: Scored<string> | null } = { current: null };
 
   walkJson(obj, (k, v) => {
     if (typeof v !== "string") return;
@@ -222,10 +229,11 @@ function scanJsonForDescription(obj: any): string | null {
     // avoid boilerplate
     if (/terms of use|privacy policy|copyright/i.test(raw)) score -= 10;
 
-    if (!best || score > best.score) best = { score, value: raw };
+    const best = bestRef.current;
+    if (!best || score > best.score) bestRef.current = { score, value: raw };
   });
 
-  return best?.value ?? null;
+  return bestRef.current?.value ?? null;
 }
 
 function normalizeAbsoluteUrl(baseUrl: string, maybeUrl: unknown): string | null {
