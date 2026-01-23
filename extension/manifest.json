@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "RentPulse Importer",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Import listing into RentPulse"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

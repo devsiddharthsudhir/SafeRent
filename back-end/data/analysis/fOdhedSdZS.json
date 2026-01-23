@@ -1,0 +1,64 @@
+{
+  "analysisId": "fOdhedSdZS",
+  "createdAt": "2026-01-22T01:16:35.084Z",
+  "subjectId": "subj_manual",
+  "listing": {
+    "title": "Furnished room in a townhouse | 40 Avenue, Vernon, British Columbia V1T 9Y2 | Do you want a landlord who respects you, communicates directly, and is easy to work with? Do you...",
+    "description": "Do you want a landlord who respects you, communicates directly, and is easy to work with? Do you want a one, fixed, monthly payment with all the bills, ut...\n\n---\nListing details (user-provided):\n- Rent: CAD 963/month\n- Bedrooms: 0\n- Bathrooms: 0\n- Location: Downtown, Avenue Vernon",
+    "price": 963,
+    "currency": "CAD",
+    "city": "Avenue Vernon",
+    "neighborhood": "Downtown",
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "landlord_subject_id": "subj_manual",
+    "source_url": "https://www.roomies.ca/rooms/670501",
+    "image_urls": [
+      "https://og.roomies.com/image?imageUrl=https%3A%2F%2Fwww.roomies.pics%2Fimage%2Fupload%2Fc_fill%2Cdpr_1.0%2Cf_jpg%2Cfl_lossy%2Cg_auto%2Ch_630%2Cq_auto%3Agood%2Cw_1200%2Fdshma9cko6omgjpzxk1r&subheading=Victor%27s%20room%20for%20rent&heading=Vernon%2C%20BC",
+      "https://www.roomies.pics/image/upload/c_fill",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/dshma9cko6omgjpzxk1r",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/yyirg4q8pe9dnned3xop",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/gerahm2mpada4dwbvqpc",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/gddfdh6mvrgzty0e4g0e"
+    ],
+    "url": "https://www.roomies.ca/rooms/670501"
+  },
+  "riskScore": 40,
+  "riskProbability": 0.4,
+  "rawLogit": -0.467111,
+  "verdict": "unclear",
+  "signals": [
+    {
+      "id": "price_anomaly_low",
+      "category": "Price",
+      "label": "Price is far below typical range for the area/type",
+      "why_it_matters": "Scam listings often use unusually low rent to create urgency and extract a deposit before a viewing.",
+      "evidence": "Baseline (CANADA UNIT BR=?): mean≈1900, sd≈450. Observed=963, z=-2.08",
+      "value": 0.6940740740740741,
+      "weight": 1.2,
+      "contribution": 0.8328888888888889,
+      "severity": "high"
+    }
+  ],
+  "topReasons": [
+    "Price is far below typical range for the area/type"
+  ],
+  "recommendedActions": [
+    "Gather more info: ask for a live video tour, exact address, and a standard lease.",
+    "Compare the rent to similar listings in the neighborhood."
+  ],
+  "confidence": 0.6605737373737374,
+  "confidenceLabel": "medium",
+  "dataQualityHints": [],
+  "redundancySteps": [
+    "Do an in-person viewing (or live video tour) before sending any money.",
+    "Ask for the landlord/agent’s full name and verify ownership (land registry / property manager website).",
+    "Reverse-image search 2–3 listing photos to spot duplicates across cities.",
+    "Compare rent vs nearby similar units (same beds/baths) to detect bait pricing.",
+    "Never pay via e-Transfer, crypto, gift cards, or cash before the lease is signed and keys are verified.",
+    "If you have a lease draft, run it through the Lease Simplifier to flag predatory clauses."
+  ],
+  "imageHashes": [],
+  "enrichmentStatus": "skipped",
+  "enrichmentReason": "Risk probability below threshold (0.45)"
+}

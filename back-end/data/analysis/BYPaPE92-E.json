@@ -1,0 +1,52 @@
+{
+  "analysisId": "BYPaPE92-E",
+  "createdAt": "2026-01-19T17:17:30.174Z",
+  "subjectId": "subj_manual",
+  "listing": {
+    "title": "Furnished room in a house | Renfrew St, Renfrew-Collingwood, British Columbia V5R 2C2 | LOCATION, LOCATION, AND LOCATION, One of the safest, quiet, friendly and affordable neighborhoods...",
+    "description": "LOCATION, LOCATION, AND LOCATION, One of the safest, quiet, friendly and affordable neighborhoods !!! Please read descriptions: Newly painted & renovated...\n\n---\nListing details (user-provided):\n- Rent: CAD 1500/month\n- Bedrooms: 0\n- Bathrooms: 1\n- Location: Kitsilano, Renfrew St Renfrew-Collingwood\n- Address hint: 10 min bus to UBC",
+    "price": 1500,
+    "currency": "CAD",
+    "city": "Renfrew St Renfrew-Collingwood",
+    "neighborhood": "Kitsilano",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "address_hint": "10 min bus to UBC",
+    "landlord_subject_id": "subj_manual",
+    "source_url": "https://www.roomies.ca/rooms/643764",
+    "image_urls": [
+      "https://og.roomies.com/image?imageUrl=https%3A%2F%2Fwww.roomies.pics%2Fimage%2Fupload%2Fc_fill%2Cdpr_1.0%2Cf_jpg%2Cfl_lossy%2Cg_auto%2Ch_630%2Cq_auto%3Agood%2Cw_1200%2Fmdqrprxldzbnykcoq0lx&subheading=Danielle%27s%20room%20for%20rent&heading=Renfrew-Collingwood%2C%20BC",
+      "https://www.roomies.pics/image/upload/c_fill",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/mdqrprxldzbnykcoq0lx",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/ed685aow52a0vkyqbey3",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/qxzm6dgoxdpprqn1ycoo",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/pl09ao7kp1jpa1utigds"
+    ],
+    "url": "https://www.roomies.ca/rooms/643764",
+    "addressHint": "10 min bus to UBC"
+  },
+  "riskScore": 26,
+  "riskProbability": 0.26,
+  "rawLogit": -1.3,
+  "verdict": "unclear",
+  "signals": [],
+  "topReasons": [],
+  "recommendedActions": [
+    "Gather more info: ask for a live video tour, exact address, and a standard lease.",
+    "Compare the rent to similar listings in the neighborhood."
+  ],
+  "confidence": 0.6,
+  "confidenceLabel": "medium",
+  "dataQualityHints": [],
+  "redundancySteps": [
+    "Do an in-person viewing (or live video tour) before sending any money.",
+    "Ask for the landlord/agent’s full name and verify ownership (land registry / property manager website).",
+    "Reverse-image search 2–3 listing photos to spot duplicates across cities.",
+    "Compare rent vs nearby similar units (same beds/baths) to detect bait pricing.",
+    "Never pay via e-Transfer, crypto, gift cards, or cash before the lease is signed and keys are verified.",
+    "If you have a lease draft, run it through the Lease Simplifier to flag predatory clauses."
+  ],
+  "imageHashes": [],
+  "enrichmentStatus": "skipped",
+  "enrichmentReason": "No web search keys configured"
+}

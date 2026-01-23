@@ -1,0 +1,85 @@
+{
+  "analysisId": "u1nF5bayT2",
+  "createdAt": "2026-01-22T03:54:03.036Z",
+  "subjectId": "subj_manual",
+  "listing": {
+    "title": "Shared furnished room with own bathroom in a trailer | Olds, Alberta T4H 1M2 | I have 2 bedrooms to rent ,price listed is for one room. 1 room has new single bed,dresser,large clo...",
+    "description": "I have 2 bedrooms to rent ,price listed is for one room. 1 room has new single bed,dresser,large closet,shelving storage, Other bedroom has queen bed,dresser...\n\n---\nListing details (user-provided):\n- Rent: CAD 575/month\n- Bedrooms: 4\n- Bathrooms: 1\n- Location: Doan, Red Deer County",
+    "price": 575,
+    "currency": "CAD",
+    "city": "Red Deer County",
+    "neighborhood": "Doan",
+    "bedrooms": 4,
+    "bathrooms": 1,
+    "landlord_subject_id": "subj_manual",
+    "source_url": "https://www.roomies.ca/rooms/886078",
+    "image_urls": [
+      "https://www.roomies.pics/image/upload/c_fill",
+      "https://www.roomies.pics/image/upload/c_fill,dpr_1.0,f_jpg,fl_lossy,g_auto,h_512,q_auto:good,w_896/jj3cmtyumvwqgv01x3dx",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/jj3cmtyumvwqgv01x3dx",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/zimhhj7pcldfytpebsds",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/kygo2cyeq7uxu4uxzadh",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/fjx70a4pztomwc7uvilh",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/eucukatd32u5rylk1cvo",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/aob5j2vvzin3nku6gmod"
+    ],
+    "url": "https://www.roomies.ca/rooms/886078"
+  },
+  "riskScore": 48,
+  "riskProbability": 0.47502081252106,
+  "rawLogit": -0.1,
+  "verdict": "unclear",
+  "signals": [
+    {
+      "id": "price_anomaly_low",
+      "category": "Price",
+      "label": "Price is far below typical range for the area/type",
+      "why_it_matters": "Scam listings often use unusually low rent to create urgency and extract a deposit before a viewing.",
+      "evidence": "Baseline (CANADA UNIT BR=2): mean≈2400, sd≈600. Observed=575, z=-3.04",
+      "value": 1,
+      "weight": 1.2,
+      "contribution": 1.2,
+      "severity": "high"
+    }
+  ],
+  "topReasons": [
+    "Price is far below typical range for the area/type"
+  ],
+  "recommendedActions": [
+    "Gather more info: ask for a live video tour, exact address, and a standard lease.",
+    "Compare the rent to similar listings in the neighborhood."
+  ],
+  "confidence": 0.7472727272727273,
+  "confidenceLabel": "high",
+  "dataQualityHints": [],
+  "redundancySteps": [
+    "Do an in-person viewing (or live video tour) before sending any money.",
+    "Ask for the landlord/agent’s full name and verify ownership (land registry / property manager website).",
+    "Reverse-image search 2–3 listing photos to spot duplicates across cities.",
+    "Compare rent vs nearby similar units (same beds/baths) to detect bait pricing.",
+    "Never pay via e-Transfer, crypto, gift cards, or cash before the lease is signed and keys are verified.",
+    "If you have a lease draft, run it through the Lease Simplifier to flag predatory clauses."
+  ],
+  "imageHashes": [],
+  "enrichmentStatus": "done",
+  "enrichmentMode": "serper",
+  "crossposts": [],
+  "providerDiagnostics": [
+    {
+      "provider": "duckduckgo",
+      "mode": "skipped",
+      "reason": "paid providers configured"
+    },
+    {
+      "provider": "serper",
+      "mode": "live",
+      "ms": 1822
+    },
+    {
+      "provider": "duckduckgo",
+      "mode": "live",
+      "ms": 1131,
+      "reason": "fallback_no_results"
+    }
+  ]
+}

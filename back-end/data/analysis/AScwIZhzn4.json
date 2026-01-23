@@ -1,0 +1,71 @@
+{
+  "analysisId": "AScwIZhzn4",
+  "createdAt": "2026-01-19T20:19:15.314Z",
+  "subjectId": "subj_manual",
+  "listing": {
+    "title": "Furnished room in a house | Burlington, Ontario L7L 3N7 | Spacious second floor room with a full size closet and locking doorknob, located in a quiet home, on...",
+    "description": "Spacious second floor room with a full size closet and locking doorknob, located in a quiet home, on a safe street in an older part of town within 900 m of L...\n\n---\nListing details (user-provided):\n- Rent: CAD 850/month\n- Bedrooms: 0\n- Bathrooms: 1\n- Location: Kitsilano, Burlington\n- Address hint: 10 min bus to UBC",
+    "price": 850,
+    "currency": "CAD",
+    "city": "Burlington",
+    "neighborhood": "Kitsilano",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "address_hint": "10 min bus to UBC",
+    "landlord_subject_id": "subj_manual",
+    "source_url": "https://www.roomies.ca/rooms/880865",
+    "image_urls": [
+      "https://og.roomies.com/image?imageUrl=https%3A%2F%2Fwww.roomies.pics%2Fimage%2Fupload%2Fc_fill%2Cdpr_1.0%2Cf_jpg%2Cfl_lossy%2Cg_auto%2Ch_630%2Cq_auto%3Agood%2Cw_1200%2Fqyacth2p0b8mk18mf1sq&subheading=Lynn%27s%20room%20for%20rent&heading=Burlington%2C%20ON",
+      "https://www.roomies.pics/image/upload/c_fill",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/qyacth2p0b8mk18mf1sq",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/clo81w91qb7rerxdtw22",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/wziddis3eixsum0mnhde",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/gjpmelovesksjzeb8jsm"
+    ],
+    "url": "https://www.roomies.ca/rooms/880865",
+    "addressHint": "10 min bus to UBC"
+  },
+  "riskScore": 21,
+  "riskProbability": 0.2141650169574414,
+  "rawLogit": -1.3,
+  "verdict": "unclear",
+  "signals": [],
+  "topReasons": [],
+  "recommendedActions": [
+    "Gather more info: ask for a live video tour, exact address, and a standard lease.",
+    "Compare the rent to similar listings in the neighborhood."
+  ],
+  "confidence": 0.6599999999999999,
+  "confidenceLabel": "medium",
+  "dataQualityHints": [],
+  "redundancySteps": [
+    "Do an in-person viewing (or live video tour) before sending any money.",
+    "Ask for the landlord/agent’s full name and verify ownership (land registry / property manager website).",
+    "Reverse-image search 2–3 listing photos to spot duplicates across cities.",
+    "Compare rent vs nearby similar units (same beds/baths) to detect bait pricing.",
+    "Never pay via e-Transfer, crypto, gift cards, or cash before the lease is signed and keys are verified.",
+    "If you have a lease draft, run it through the Lease Simplifier to flag predatory clauses."
+  ],
+  "imageHashes": [],
+  "enrichmentStatus": "done",
+  "enrichmentMode": "both",
+  "enrichmentForced": true,
+  "crossposts": [],
+  "providerDiagnostics": [
+    {
+      "provider": "brave",
+      "mode": "skipped",
+      "reason": "BRAVE_SEARCH_API_KEY not set"
+    },
+    {
+      "provider": "duckduckgo",
+      "mode": "live",
+      "ms": 1335
+    },
+    {
+      "provider": "serper",
+      "mode": "live",
+      "ms": 1746
+    }
+  ]
+}

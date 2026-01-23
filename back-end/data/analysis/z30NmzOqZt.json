@@ -1,0 +1,85 @@
+{
+  "analysisId": "z30NmzOqZt",
+  "createdAt": "2026-01-20T13:30:49.837Z",
+  "subjectId": "subj_manual",
+  "listing": {
+    "title": "Furnished room in a townhouse | Natalie Court, Beaver Dams, Ontario L2V 5C6 | A GEM!!! - 1 Room Available February 1st 1 Large lower level bedroom for a Male sharing one bathro...",
+    "description": "A GEM!!! - 1 Room Available February 1st 1 Large lower level bedroom for a Male sharing one bathroom with 1 male. • Suitable for Working Professionals or...\n\n---\nListing details (user-provided):\n- Rent: CAD 850/month\n- Bedrooms: 2\n- Bathrooms: 1\n- Location: Downtown, Natalie Court Beaver Dams\n- Address hint: Near Granville Station",
+    "price": 850,
+    "currency": "CAD",
+    "city": "Natalie Court Beaver Dams",
+    "neighborhood": "Downtown",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "address_hint": "Near Granville Station",
+    "landlord_subject_id": "subj_manual",
+    "source_url": "https://www.roomies.ca/rooms/794583",
+    "image_urls": [
+      "https://og.roomies.com/image?imageUrl=https%3A%2F%2Fwww.roomies.pics%2Fimage%2Fupload%2Fc_fill%2Cdpr_1.0%2Cf_jpg%2Cfl_lossy%2Cg_auto%2Ch_630%2Cq_auto%3Agood%2Cw_1200%2Focrqzepnoucov6hf5iyj&subheading=Catherine%20Eves%27s%20room%20for%20rent&heading=Beaver%20Dams%2C%20ON",
+      "https://www.roomies.pics/image/upload/c_fill",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/ocrqzepnoucov6hf5iyj",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/hced6eeijsjtpw07ruf1",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/g9siborifob2icvyrx7q",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/mez0qopabfcbl1stmvmp"
+    ],
+    "url": "https://www.roomies.ca/rooms/794583",
+    "addressHint": "Near Granville Station"
+  },
+  "riskScore": 41,
+  "riskProbability": 0.40934671729911415,
+  "rawLogit": -0.366667,
+  "verdict": "unclear",
+  "signals": [
+    {
+      "id": "price_anomaly_low",
+      "category": "Price",
+      "label": "Price is far below typical range for the area/type",
+      "why_it_matters": "Scam listings often use unusually low rent to create urgency and extract a deposit before a viewing.",
+      "evidence": "Baseline (CANADA UNIT BR=?): mean≈1900, sd≈450. Observed=850, z=-2.33",
+      "value": 0.7777777777777778,
+      "weight": 1.2,
+      "contribution": 0.9333333333333333,
+      "severity": "high"
+    }
+  ],
+  "topReasons": [
+    "Price is far below typical range for the area/type"
+  ],
+  "recommendedActions": [
+    "Gather more info: ask for a live video tour, exact address, and a standard lease.",
+    "Compare the rent to similar listings in the neighborhood."
+  ],
+  "confidence": 0.7278787878787878,
+  "confidenceLabel": "high",
+  "dataQualityHints": [],
+  "redundancySteps": [
+    "Do an in-person viewing (or live video tour) before sending any money.",
+    "Ask for the landlord/agent’s full name and verify ownership (land registry / property manager website).",
+    "Reverse-image search 2–3 listing photos to spot duplicates across cities.",
+    "Compare rent vs nearby similar units (same beds/baths) to detect bait pricing.",
+    "Never pay via e-Transfer, crypto, gift cards, or cash before the lease is signed and keys are verified.",
+    "If you have a lease draft, run it through the Lease Simplifier to flag predatory clauses."
+  ],
+  "imageHashes": [],
+  "enrichmentStatus": "done",
+  "enrichmentMode": "both",
+  "enrichmentForced": true,
+  "crossposts": [],
+  "providerDiagnostics": [
+    {
+      "provider": "brave",
+      "mode": "skipped",
+      "reason": "BRAVE_SEARCH_API_KEY not set"
+    },
+    {
+      "provider": "serper",
+      "mode": "cache",
+      "ms": 0
+    },
+    {
+      "provider": "duckduckgo",
+      "mode": "cache",
+      "ms": 0
+    }
+  ]
+}

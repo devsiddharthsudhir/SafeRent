@@ -1,0 +1,56 @@
+{
+  "updatedAt": "2026-01-15",
+  "notes": "Seed baselines for beta. Replace with up-to-date values before production. Units are monthly rent in CAD.",
+  "cities": {
+    "vancouver": {
+      "unit": {
+        "studio": { "mean": 2100, "sd": 350 },
+        "1": { "mean": 2450, "sd": 450 },
+        "2": { "mean": 3350, "sd": 650 },
+        "3": { "mean": 4300, "sd": 900 },
+        "4+": { "mean": 5200, "sd": 1100 }
+      },
+      "room": { "mean": 1250, "sd": 300 }
+    },
+    "toronto": {
+      "unit": {
+        "studio": { "mean": 2000, "sd": 350 },
+        "1": { "mean": 2400, "sd": 450 },
+        "2": { "mean": 3100, "sd": 650 },
+        "3": { "mean": 3900, "sd": 850 },
+        "4+": { "mean": 4700, "sd": 1000 }
+      },
+      "room": { "mean": 1200, "sd": 300 }
+    },
+    "calgary": {
+      "unit": {
+        "studio": { "mean": 1350, "sd": 250 },
+        "1": { "mean": 1600, "sd": 300 },
+        "2": { "mean": 2100, "sd": 450 },
+        "3": { "mean": 2700, "sd": 600 },
+        "4+": { "mean": 3300, "sd": 750 }
+      },
+      "room": { "mean": 900, "sd": 220 }
+    },
+    "montreal": {
+      "unit": {
+        "studio": { "mean": 1250, "sd": 250 },
+        "1": { "mean": 1550, "sd": 320 },
+        "2": { "mean": 2000, "sd": 450 },
+        "3": { "mean": 2550, "sd": 600 },
+        "4+": { "mean": 3100, "sd": 750 }
+      },
+      "room": { "mean": 850, "sd": 220 }
+    },
+    "canada": {
+      "unit": {
+        "studio": { "mean": 1600, "sd": 350 },
+        "1": { "mean": 1900, "sd": 450 },
+        "2": { "mean": 2400, "sd": 600 },
+        "3": { "mean": 3000, "sd": 750 },
+        "4+": { "mean": 3600, "sd": 900 }
+      },
+      "room": { "mean": 1050, "sd": 250 }
+    }
+  }
+}

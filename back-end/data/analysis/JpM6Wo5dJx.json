@@ -1,0 +1,55 @@
+{
+  "analysisId": "JpM6Wo5dJx",
+  "createdAt": "2026-01-14T14:30:30.902Z",
+  "subjectId": "subj_unknown",
+  "listing": {
+    "source_url": "https://www.roomies.ca/rooms/841783",
+    "title": "Robert Ewing's room Orléans, ON K1W 0S5",
+    "description": "New townhouse, shared main level with open concept kitchen, living room and dining room, shared laundry room in basement and 3 bedrooms upstairs. Street par...",
+    "price": 975,
+    "currency": "CAD",
+    "city": "ON K1W 0S5 Private room with shared bathroom",
+    "neighborhood": "Robert Ewing's room Orléans",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "account_age_days": 30,
+    "posts_last_7d": 1,
+    "denied_inquiries_last_7d": 0,
+    "image_urls": [
+      "https://og.roomies.com/image?imageUrl=https%3A%2F%2Fwww.roomies.pics%2Fimage%2Fupload%2Fc_fill%2Cdpr_1.0%2Cf_jpg%2Cfl_lossy%2Cg_auto%2Ch_630%2Cq_auto%3Agood%2Cw_1200%2Fu5srub5brwncuk5g6yxc&subheading=Robert%20Ewing%27s%20room%20for%20rent&heading=Orl%C3%A9ans%2C%20ON",
+      "https://www.roomies.pics/image/upload/c_fill,dpr_1.0,f_jpg,fl_lossy,g_auto,h_512,q_auto:good,w_896/u5srub5brwncuk5g6yxc",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/u5srub5brwncuk5g6yxc",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/ynhlmtghgo13r7r3mera",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/mfaham2louphrvvsu4fi",
+      "https://www.roomies.pics/image/upload/c_scale,dpr_1.0,f_jpg,fl_lossy,q_auto:good,w_672/adcytdtoprxyqc0hnjx4"
+    ]
+  },
+  "riskScore": 43,
+  "riskProbability": 0.4332091982210046,
+  "verdict": "unclear",
+  "signals": [
+    {
+      "id": "price_anomaly_low",
+      "category": "Price",
+      "label": "Price is unusually low for similar rentals",
+      "why_it_matters": "Extremely low prices are a common bait tactic in rental scams.",
+      "evidence": "This price is about 3.7 standard deviations below a small baseline.",
+      "value": 0.91796875,
+      "weight": 1.1,
+      "contribution": 1.009765625,
+      "severity": "high"
+    }
+  ],
+  "topReasons": [
+    "Price is unusually low for similar rentals"
+  ],
+  "recommendedActions": [
+    "Request a viewing and confirm the identity and authorization of the landlord or agent.",
+    "Never pay a deposit before you have verified the unit and agreed to written terms.",
+    "Prefer platform messaging and traceable payment methods after verification.",
+    "Do not share sensitive identity documents unless necessary and secure."
+  ],
+  "imageHashes": [],
+  "enrichmentStatus": "skipped",
+  "enrichmentReason": "No web search keys configured"
+}

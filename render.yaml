@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rentpulse-api
+    env: node
+    rootDir: back-end
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        value: https://YOUR_NETLIFY_SITE.netlify.app

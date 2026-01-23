@@ -1,0 +1,58 @@
+{
+  "analysisId": "jM8jaN2uHP",
+  "createdAt": "2026-01-18T10:24:42.424Z",
+  "subjectId": "subj_manual",
+  "listing": {
+    "title": "This is a 1 bedroom, 3 bathroom, Single Family home. It is in the Grandview n...",
+    "description": "This is a 1 bedroom, 3 bathroom, Single Family home. It is in the Grandview neighborhood in Vancouver, BC.",
+    "price": 0,
+    "currency": "CAD",
+    "landlord_subject_id": "subj_manual",
+    "image_urls": []
+  },
+  "riskScore": 31,
+  "riskProbability": 0.31,
+  "rawLogit": -1.15,
+  "verdict": "unclear",
+  "signals": [
+    {
+      "id": "behavior_missing_location",
+      "category": "Behavior",
+      "label": "Missing location details",
+      "why_it_matters": "Listings that hide city/neighborhood are harder to verify and sometimes used for bait pricing.",
+      "evidence": "No city, neighborhood, or address hint provided",
+      "value": 1,
+      "weight": 0.15,
+      "contribution": 0.15,
+      "severity": "low"
+    }
+  ],
+  "topReasons": [
+    "Missing location details"
+  ],
+  "recommendedActions": [
+    "Gather more info: ask for a live video tour, exact address, and a standard lease.",
+    "Compare the rent to similar listings in the neighborhood."
+  ],
+  "confidence": 0.29424242424242425,
+  "confidenceLabel": "low",
+  "dataQualityHints": [
+    "Add the full description text (fees, rules, viewing details).",
+    "Add the monthly rent (CAD).",
+    "Add city + neighborhood (or nearest intersection).",
+    "Add the original listing URL.",
+    "Add 2–6 photos (kitchen, bathroom, exterior, bedroom)."
+  ],
+  "redundancySteps": [
+    "Result confidence is low: add missing details (URL, photos, full description) and re-check.",
+    "Do an in-person viewing (or live video tour) before sending any money.",
+    "Ask for the landlord/agent’s full name and verify ownership (land registry / property manager website).",
+    "Reverse-image search 2–3 listing photos to spot duplicates across cities.",
+    "Compare rent vs nearby similar units (same beds/baths) to detect bait pricing.",
+    "Never pay via e-Transfer, crypto, gift cards, or cash before the lease is signed and keys are verified.",
+    "If you have a lease draft, run it through the Lease Simplifier to flag predatory clauses."
+  ],
+  "imageHashes": [],
+  "enrichmentStatus": "skipped",
+  "enrichmentReason": "No web search keys configured"
+}
