@@ -190,16 +190,6 @@ textarea::placeholder {
 }
 
 /* Clamp helpers */
-
-/* Hide scrollbars (mobile nav chips) */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 .clamp-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -369,6 +359,21 @@ textarea::placeholder {
 .report-md ul,
 .report-md ol {
   margin: 0.5rem 0 0.7rem 1.1rem;
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+@layer utilities {
+  /* Hide scrollbars while keeping scroll (used for mobile nav chips) */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 .report-md li {
