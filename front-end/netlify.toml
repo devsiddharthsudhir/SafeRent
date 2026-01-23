@@ -2,7 +2,7 @@
   # netlify.toml is inside /front-end, so base is the current directory
   base = "."
   # Force a clean install so node_modules isn't reused with bad permissions
-  command = "cd front-end && npm ci && npm run build
+  command = "cd front-end && npm ci && npm run build"
 "
   publish = "dist"
 
