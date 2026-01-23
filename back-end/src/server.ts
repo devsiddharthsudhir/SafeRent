@@ -50,7 +50,6 @@ function loadDotEnv() {
 
         if (process.env[k] == null) process.env[k] = v;
       }
-      // stop at first found env file
       return;
     } catch {
       // ignore
@@ -129,6 +128,24 @@ app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
   return next(err as any);
 });
 
+/** ✅ Add these: friendly root endpoints (stops Render "/" spam + makes /api not look broken) */
+app.get("/", (_req: Request, res: Response) => {
+  res.status(200).type("text/plain; charset=utf-8").send("SafeRent API is running.");
+});
+app.head("/", (_req: Request, res: Response) => res.status(200).end());
+
+app.get("/health", (_req: Request, res: Response) => res.json({ ok: true }));
+
+// This makes /api and /api/ return something useful (instead of 404)
+app.get("/api", (_req: Request, res: Response) => {
+  res.status(200).json({
+    ok: true,
+    message: "SafeRent API base. Try /api/health",
+    endpoints: ["/api/health", "/api/demo/listings"],
+  });
+});
+app.head("/api", (_req: Request, res: Response) => res.status(200).end());
+
 app.use(
   rateLimit({
     windowMs: 60_000,
@@ -172,7 +189,11 @@ maybeScheduleRetentionSweep();
 const port = process.env.PORT ? Number(process.env.PORT) : 4000;
 
 app.use((req: Request, res: Response) => {
-  res.status(404).json({ error: "Not found", path: req.originalUrl, requestId: (req as any).requestId });
+  res.status(404).json({
+    error: "Not found",
+    path: req.originalUrl,
+    requestId: (req as any).requestId,
+  });
 });
 
 app.use((err: unknown, req: Request, res: Response, _next: NextFunction) => {
@@ -181,7 +202,9 @@ app.use((err: unknown, req: Request, res: Response, _next: NextFunction) => {
   const isProd = String(process.env.NODE_ENV || "").toLowerCase() === "production";
   const message = err instanceof Error ? err.message : String((err as any)?.message || "");
 
-  console.error(JSON.stringify({ t: new Date().toISOString(), rid: (req as any).requestId, level: "error", msg: message }));
+  console.error(
+    JSON.stringify({ t: new Date().toISOString(), rid: (req as any).requestId, level: "error", msg: message })
+  );
 
   res.status(status).json({
     error: status >= 500 ? "Server error" : (message || "Request failed"),
