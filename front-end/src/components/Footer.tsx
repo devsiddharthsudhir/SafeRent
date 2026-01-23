@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Linkedin } from "lucide-react";
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -15,6 +15,7 @@ function FooterLink({ to, children }: { to: string; children: React.ReactNode })
 export default function Footer() {
   const navigate = useNavigate();
   const year = new Date().getFullYear();
+  const linkedInUrl = (import.meta as any).env?.VITE_LINKEDIN_URL || "https://www.linkedin.com";
 
   return (
     <footer className="mt-10">
@@ -58,11 +59,12 @@ export default function Footer() {
                 </button>
 
                 <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
+                  href={linkedInUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-semibold chip soft-border hover:opacity-95 focus-ring"
                 >
-                  GitHub <Github size={16} />
+                  LinkedIn <Linkedin size={16} />
                 </a>
               </div>
             </div>
@@ -74,7 +76,6 @@ export default function Footer() {
                   <FooterLink to="/checker">Listing Checker</FooterLink>
                   <FooterLink to="/lease">Lease Simplifier</FooterLink>
                   <FooterLink to="/report">Report Workflow</FooterLink>
-                  <FooterLink to="/reputation">Reputation</FooterLink>
                 </div>
               </div>
 

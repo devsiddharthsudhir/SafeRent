@@ -5,14 +5,10 @@ import {
   Home,
   Layers,
   LayoutGrid,
-  Moon,
-  Sun,
 } from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
-
-import { applySeo, ROUTE_SEO } from "../lib/seo";
 
 import logoPng from "../assets/saferent-logo.png";
 
@@ -33,14 +29,14 @@ const NAV: NavItem[] = [
   { to: "/report", label: "Report", Icon: FileText },
 ];
 
-function getInitialTheme(): "dark" | "light" {
-  const stored = localStorage.getItem("saferent:theme") as "dark" | "light" | null;
-  return stored === "light" || stored === "dark" ? stored : "dark";
-}
-
-function applyTheme(theme: "dark" | "light") {
-  document.documentElement.dataset.theme = theme;
-  localStorage.setItem("saferent:theme", theme);
+function applyLightTheme() {
+  // Keep the experience consistent for consumers (no theme toggle).
+  document.documentElement.dataset.theme = "light";
+  try {
+    localStorage.setItem("saferent:theme", "light");
+  } catch {
+    // ignore
+  }
 }
 
 function BrandMark() {
@@ -52,7 +48,7 @@ function BrandMark() {
     >
       <img
         src={logoPng}
-        alt="SafeRent logo"
+        alt=""
         className="h-7 w-7 object-contain"
         draggable={false}
       />
@@ -62,38 +58,35 @@ function BrandMark() {
 
 export default function Shell({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
-  const [theme, setTheme] = useState<"dark" | "light">(getInitialTheme());
 
-  useEffect(() => applyTheme(theme), [theme]);
-
-  // SEO + better refresh behavior: set stable titles/description/canonical per route.
   useEffect(() => {
-    const cfg = ROUTE_SEO[pathname] || {
-      title: "SafeRent",
-      description: "SafeRent helps renters in Canada verify listings before they pay.",
-    };
-    applySeo({ ...cfg, path: pathname });
-  }, [pathname]);
+    applyLightTheme();
+  }, []);
 
   return (
     <div className="app-grid min-h-screen">
       <header className="sticky top-0 z-50">
         <div className="mx-auto max-w-7xl px-4 py-4">
           <div className="glass-strong rounded-3xl px-5 py-3">
-            <div className="grid grid-cols-3 items-center gap-3">
+            {/*
+              Mobile-first header layout.
+              - Prevents brand/tagline from getting squeezed (no 1/3 columns).
+              - Keeps controls readable and tap-friendly.
+            */}
+            <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
               <button
                 type="button"
                 onClick={() => navigate("/")}
-                className="flex items-center gap-3 focus-ring rounded-2xl px-2 py-1 justify-self-start"
+                className="flex min-w-0 items-center gap-3 focus-ring rounded-2xl px-2 py-1 justify-self-start"
               >
                 <BrandMark />
-                <div className="leading-tight">
+                <div className="min-w-0 leading-tight">
                   <div className="text-lg font-extrabold tracking-wide">
                     <span style={{ color: "var(--sr-text)" }}>SAFE</span>
                     <span style={{ color: "var(--sr-accent)" }}>RENT</span>
                   </div>
-                  <div className="text-[11px] subtle tracking-[0.18em]">
+                  {/* Hide tagline on very small screens to avoid wrap/overlap */}
+                  <div className="hidden sm:block text-[11px] subtle tracking-[0.18em] truncate">
                     VERIFY BEFORE YOU RENT
                   </div>
                 </div>
@@ -115,24 +108,11 @@ export default function Shell({ children }: { children: React.ReactNode }) {
               </nav>
 
               <div className="flex items-center justify-end gap-2 justify-self-end">
-                <button
-                  type="button"
-                  onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
-                  className="grid h-10 w-10 place-items-center rounded-2xl hover:opacity-95 focus-ring"
-                  style={{
-                    background: "var(--sr-surface)",
-                    border: "1px solid var(--sr-border)",
-                  }}
-                  aria-label="Toggle theme"
-                >
-                  {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-                </button>
-
                 {/* ✅ Emergency button stays RED */}
                 <button
                   type="button"
                   onClick={() => navigate("/emergency")}
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2 text-sm font-semibold soft-border focus-ring hover:opacity-95"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-3 py-2 sm:px-4 text-sm font-semibold soft-border focus-ring hover:opacity-95"
                   style={{
                     borderRadius: 999,
                     background: "rgba(239, 68, 68, 0.95)",
@@ -141,28 +121,30 @@ export default function Shell({ children }: { children: React.ReactNode }) {
                   }}
                 >
                   <AlertTriangle size={16} />
-                  Emergency
+                  <span className="hidden sm:inline">Emergency</span>
                 </button>
               </div>
             </div>
 
             {/* Mobile nav */}
-            <div className="mt-3 grid grid-cols-5 gap-2 md:hidden">
-              {NAV.map(({ to, label, Icon }) => (
-                <NavLink
-                  key={to}
-                  to={to}
-                  className={({ isActive }) =>
-                    [
-                      "chip rounded-2xl px-3 py-2 text-xs font-semibold flex items-center justify-center gap-2",
-                      isActive ? "ring-soft" : "hover:opacity-95",
-                    ].join(" ")
-                  }
-                >
-                  <Icon size={14} />
-                  {label}
-                </NavLink>
-              ))}
+            <div className="mt-3 md:hidden overflow-x-auto no-scrollbar">
+              <div className="flex min-w-max items-center gap-2">
+                {NAV.map(({ to, label, Icon }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    className={({ isActive }) =>
+                      [
+                        "chip rounded-2xl px-3 py-2 text-xs font-semibold flex items-center justify-center gap-2 whitespace-nowrap",
+                        isActive ? "ring-soft" : "hover:opacity-95",
+                      ].join(" ")
+                    }
+                  >
+                    <Icon size={14} />
+                    {label}
+                  </NavLink>
+                ))}
+              </div>
             </div>
           </div>
         </div>
