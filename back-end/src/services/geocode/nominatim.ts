@@ -81,3 +81,4 @@ export async function geocodeCanada(query: string): Promise<GeoPoint | null> {
   cacheSet(key, out, 14 * 24 * 60 * 60 * 1000);
   return out;
 }
+
