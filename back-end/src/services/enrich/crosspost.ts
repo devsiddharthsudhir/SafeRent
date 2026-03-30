@@ -688,3 +688,4 @@ function buildCrosspostSignals(listing: Listing, matches: CrosspostMatch[], weig
 
   return signals;
 }
+
