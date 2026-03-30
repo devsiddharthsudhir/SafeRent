@@ -128,3 +128,4 @@ reportRouter.get("/report/:analysisId", (req, res) => {
 
   res.json({ analysisId, markdown: md, analysis: a });
 });
+
