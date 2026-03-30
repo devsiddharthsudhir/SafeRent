@@ -1,4 +1,4 @@
-## SafeRent / RentPulse backend (Render-friendly, production)
+## SafeRent backend (Render-friendly, production)
 ## Fixes: "tsc: not found" during Docker builds by installing dev deps in the build stage.
 
 FROM node:20-alpine AS build
