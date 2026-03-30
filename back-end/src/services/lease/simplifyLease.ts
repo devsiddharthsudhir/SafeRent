@@ -536,3 +536,4 @@ export function inferProvinceFromListingLike(input: { city?: string; neighborhoo
   };
   return inferProvince(listing);
 }
+
