@@ -1248,3 +1248,4 @@ const bedsBaths = {
     image_urls: Array.from(images).slice(0, 10),
   };
 }
+
