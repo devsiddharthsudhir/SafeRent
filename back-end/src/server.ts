@@ -216,3 +216,4 @@ app.use((err: unknown, req: Request, res: Response, _next: NextFunction) => {
 app.listen(port, () => {
   console.log(`RentPulse backend on http://localhost:${port}`);
 });
+
